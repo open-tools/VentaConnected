@@ -11,6 +11,8 @@
 
 // Enable debug prints to serial monitor
 #define MY_DEBUG 
+//#define MY_BAUD_RATE 9600
+#define MY_NODE_ID 9
 #define MY_RADIO_NRF24                    // Enable and select radio type attached
 #define MY_REPEATER_FEATURE               // Enabled repeater feature for this node
 
@@ -42,7 +44,7 @@ SSD1306AsciiAvrI2c oled;
 //   - PIN_ERR  D8 ... Control Error LED
 // Button detection (input, pullup!):
 //   - PIN_OPEN D5 ... Case open Button => causes Error
-// LED detection (input, NO pullup, already connected to +VCC via LED+resistor):
+// LED detection (input, pullup):
 //   - LED_PWR   D6 ... Power LED 
 //   - LED_ERR  D7 ... Error LED
 //   - LED_1    A1 ... Level 1 LED
@@ -92,10 +94,10 @@ void setup() {
   pinMode(PIN_PWR, OUTPUT);
   pinMode(PIN_UD,  OUTPUT);
   pinMode(PIN_OPEN,INPUT_PULLUP);
-  pinMode(LED_PWR,  INPUT);
-  pinMode(LED_1,   INPUT);
-  pinMode(LED_2,   INPUT);
-  pinMode(LED_3,   INPUT);
+  pinMode(LED_PWR,  INPUT_PULLUP);
+  pinMode(LED_1,   INPUT_PULLUP);
+  pinMode(LED_2,   INPUT_PULLUP);
+  pinMode(LED_3,   INPUT_PULLUP);
   pinMode(LED_ERR, INPUT);
   pinMode(PIN_ERR, OUTPUT);
 
@@ -124,10 +126,10 @@ void before() {
 }
 
 void presentation() {
-  present(ID_POWER, S_BINARY);
-  present(ID_LEVEL, S_CUSTOM);
-  present(ID_ERROR, S_BINARY);
-  present(ID_OPEN, S_BINARY);
+  present(ID_POWER, S_BINARY, "Venta POWER", true);
+  present(ID_LEVEL, S_CUSTOM, "Venta LEVEL", true);
+  present(ID_ERROR, S_BINARY, "Venta ERROR", true);
+  present(ID_OPEN, S_BINARY, "Venta Case Open", true);
 //  present(ID_REPEATER, S_ARDUINO_REPEATER_NODE);
 
   sendSketchInfo(SKETCH_NAME, SKETCH_VERSION);
@@ -266,12 +268,6 @@ void readVentaState() {
   power = digitalRead(LED_PWR) == LOW;
   error = digitalRead(LED_ERR) == LOW;
   caseopen = digitalRead(PIN_OPEN) == LOW;
-//Serial.print(F("pw: "));
-//Serial.print(power);
-//Serial.print(" (");
-//Serial.print(prev_power);
-//Serial.print(")");
-//Serial.println();
 
   if (digitalRead(LED_1) == LOW) {
     level = 1;
@@ -304,32 +300,36 @@ void ledOff(int pin) {
 
 
 void updateDisplay() {
-  oled.clear();
+  oled.setCursor(0, 0);
   oled.set2X();
   oled.print(F("Power: "));
-  oled.println(power ? F("ON") : F("OFF"));
+  oled.print(power ? F("ON") : F("OFF"));  oled.clearToEOL(); oled.println();
 
   if (power) {
     oled.set2X();
     oled.print(F("Level "));
-    oled.println(level);
+    oled.print(level);
+    oled.clearToEOL(); oled.println();
 
     oled.print(F("Error: "));
-    oled.println(error ? F("YES") : F("no"));
+    oled.print(error ? F("YES") : F("no"));
+    oled.clearToEOL(); oled.println();
   } else {
-    oled.println();
-    oled.println();
+    oled.clearToEOL(); oled.println();
+    oled.clearToEOL(); oled.println();
   }
 
   oled.set1X();
   oled.print(F("Case Open: "));
-  oled.println(caseopen ? F("YES") : F("no"));
+  oled.print(caseopen ? F("YES") : F("no"));
+  oled.clearToEOL(); oled.println();
 
   oled.set1X();
 //  oled.print(F("pwr:"));oled.print(pwr); oled.print(F(", "));
   //oled.print("ud:");oled.print(ud); oled.print(", ");
   //oled.print("err:");oled.print(err); oled.print(", ");
-  oled.println();
+  oled.clearToEOL(); oled.println();
+  oled.clear(0, oled.displayWidth() - 1, oled.row(), oled.displayRows());
 }
 
 

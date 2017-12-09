@@ -4,7 +4,6 @@
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -11788,7 +11787,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="3"/>
 <wire x1="124.46" y1="241.3" x2="139.7" y2="241.3" width="0.1524" layer="91"/>
 <junction x="124.46" y="241.3"/>
-<label x="139.7" y="241.3" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="241.3" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LED_ON" class="0">
@@ -11798,7 +11797,7 @@ when turned on.</text>
 <wire x1="124.46" y1="243.84" x2="139.7" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="CON8" gate="G$1" pin="2"/>
 <junction x="124.46" y="243.84"/>
-<label x="139.7" y="243.84" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="243.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="2"/>
@@ -11814,7 +11813,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="4"/>
 <wire x1="124.46" y1="238.76" x2="139.7" y2="238.76" width="0.1524" layer="91"/>
 <junction x="124.46" y="238.76"/>
-<label x="139.7" y="238.76" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="238.76" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="4"/>
@@ -11830,7 +11829,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="6"/>
 <wire x1="124.46" y1="233.68" x2="139.7" y2="233.68" width="0.1524" layer="91"/>
 <junction x="124.46" y="233.68"/>
-<label x="139.7" y="233.68" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="233.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="6"/>
@@ -11845,7 +11844,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="8"/>
 <wire x1="124.46" y1="228.6" x2="139.7" y2="228.6" width="0.1524" layer="91"/>
 <junction x="124.46" y="228.6"/>
-<label x="139.7" y="228.6" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="228.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="8"/>
@@ -11861,7 +11860,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="10"/>
 <wire x1="124.46" y1="223.52" x2="139.7" y2="223.52" width="0.1524" layer="91"/>
 <junction x="124.46" y="223.52"/>
-<label x="139.7" y="223.52" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="223.52" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="10"/>
@@ -11883,7 +11882,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="5"/>
 <wire x1="124.46" y1="236.22" x2="139.7" y2="236.22" width="0.1524" layer="91"/>
 <junction x="124.46" y="236.22"/>
-<label x="139.7" y="236.22" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="236.22" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BTN_PWR" class="0">
@@ -11893,7 +11892,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="7"/>
 <wire x1="124.46" y1="231.14" x2="139.7" y2="231.14" width="0.1524" layer="91"/>
 <junction x="124.46" y="231.14"/>
-<label x="139.7" y="231.14" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="231.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="7"/>
@@ -11909,7 +11908,7 @@ when turned on.</text>
 <pinref part="CON9" gate="G$1" pin="9"/>
 <wire x1="124.46" y1="226.06" x2="139.7" y2="226.06" width="0.1524" layer="91"/>
 <junction x="124.46" y="226.06"/>
-<label x="139.7" y="226.06" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="226.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="CON7" gate="G$1" pin="9"/>
@@ -11931,7 +11930,7 @@ when turned on.</text>
 <wire x1="124.46" y1="246.38" x2="139.7" y2="246.38" width="0.1524" layer="91"/>
 <pinref part="CON8" gate="G$1" pin="1"/>
 <junction x="124.46" y="246.38"/>
-<label x="139.7" y="246.38" size="1.778" layer="95" xref="yes"/>
+<label x="139.7" y="246.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">

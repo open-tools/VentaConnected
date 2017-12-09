@@ -1,2 +1,5 @@
+eagle.epf
 .pioenvs
 .piolibdeps
+*.b#*
+*.s#*
