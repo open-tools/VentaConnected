@@ -1,0 +1,23 @@
+Partlist
+
+Exported from VentaConnected_ESP8266_V1.0_2018-10-06.brd at 12.10.18 23:47
+
+EAGLE Version 8.5.0 Copyright (c) 1988-2017 Autodesk, Inc.
+
+Assembly variant: 
+
+Part        Value               Package                      Library           Position (mil)        Orientation
+
+C2          0.1uF capacitor, C0805
+J1          2x5pin boxed header male, 2.54mm
+J2          2x5pin female header, 2.54mm
+Q1,Q4,Q5    2N7000 transistor, SOT23
+R1,R2,R3    47R resistor, R0805
+R4,R5       1M resistor, R0805
+R6,R7,R8,R9,R10,R13,R14,R15,R16,R20,R21       10k resistor, R0805
+R18         470R resistor, R0805
+SW1,SW3     Tactile switch, SMD 6x3.5mm
+U2          24V to 3.3V Buck converter
+U3          LM339 comparator, SO14
+U4          LM393 comparator, SO08
+X2          ESP-12e wlan module and microcontroller
