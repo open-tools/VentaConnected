@@ -1,0 +1,3 @@
+Modifications made by Licensee and/or Licensor (see section 3.4.b in the CERN OHL)
+
+V1.0: Initial release of the ESP8266-based version
